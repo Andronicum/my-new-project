@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class Calcul {
 
     static int Convert(String number){
