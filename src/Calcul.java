@@ -80,53 +80,96 @@ public class Calcul {
     }
 
     static String ArabicConvert(int number){
-        if(number == 1){
-            return "I";
+
+        String result = "Halo!";
+
+        if (number < 11){
+
+            result = One(number);
         }
-        if(number == 2){
-            return "II";
+
+
+
+        if (number > 10){
+
+            int ten = number / 10;      //  Колличество десятков
+            int one = number % 10;      //  Колличество едениц
+            result = Ten(ten) + One(one);
         }
-        if(number == 3){
-            return "III";
-        }
-        if(number == 4){
-            return "IV";
-        }
-        if(number == 5){
-            return "V";
-        }
-        if(number == 6){
-            return "VI";
-        }
-        if(number == 7){
-            return "VII";
-        }
-        if(number == 8){
-            return "VIII";
-        }
-        if(number == 9){
-            return "IX";
-        }
-        if(number == 10){
+        return result;
+    }
+    static String Ten (int ten){
+
+        if (ten == 1){
             return "X";
         }
-        if(number == 11){
-            return "XI";
+        if (ten == 2){
+            return "XX";
         }
-        if (number == 12){
-            return "XII";
+        if (ten == 3){
+            return "XXX";
         }
-        if (number == 13){
-            return "XIII";
+        if(ten == 4){
+            return "XL";
         }
-        if(number == 14){
-            return "XIV";
+        if (ten == 5){
+            return "L";
         }
-        if (number == 15){
-            return "XV";
+        if (ten == 6){
+            return "LX";
+        }
+        if (ten == 7){
+            return "LXX";
+        }
+        if (ten == 8){
+            return "LXXX";
+        }
+        if (ten == 9){
+            return "XC";
+        }
+        if (ten == 10){
+            return "C";
         }
         else {
-            return "W";
+            return "F";
+        }
+
+    }
+    static String One (int one){
+        if(one == 1){
+            return "I";
+        }
+        if(one == 2){
+            return "II";
+        }
+        if(one == 3){
+            return "III";
+        }
+        if(one == 4){
+            return "IV";
+        }
+        if(one == 5){
+            return "V";
+        }
+        if(one == 6){
+            return "VI";
+        }
+        if(one == 7){
+            return "VII";
+        }
+        if(one == 8){
+            return "VIII";
+        }
+        if(one == 9){
+            return "IX";
+        }
+        if(one == 10){
+            return "X";
+        }
+
+
+        else {
+            return " ";
         }
     }
 
