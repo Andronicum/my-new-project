@@ -185,6 +185,8 @@ public class Calcul {
 
         String[] moreString = allString.split(" ");     // разбиваем строку на элементы
 
+        if (moreString.length > 3) throw new NegativeNumberException();
+
 
         String number1 = moreString[0];         //  первое числло в строчку
         boolean isRomeNumber1 = false;           // римское ли число - нет
